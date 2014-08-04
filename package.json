@@ -1,0 +1,14 @@
+{
+  "name": "apinic-news",
+  "version": "0.0.1",
+  "description": "Noticias de diarios y noticieros de Nicaragua ",
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "express": "^4.6.1",
+    "mongoose": "^3.8.14"
+  },
+  "main": "api.js",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
