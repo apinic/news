@@ -20,7 +20,7 @@ module.exports.librariesAll = function(req, res) {
  */
 module.exports.entries = function(req, res) {
   if (req.params.id) {
-    models.entries.find({'library_id':req.param.id}, function(err, rows) {
+    models.entries.find({'library_id':req.params.id}, function(err, rows) {
       if (err) {
         res.json({error:{message:err}});
       }
