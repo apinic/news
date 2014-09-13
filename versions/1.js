@@ -2,7 +2,7 @@ var models = require('../models');
 
 module.exports.librariesAll = function(req, res) {
 
-  models.libraries.find({}, function(err, rows) {
+  models.libraries.find({enabled:true}, function(err, rows) {
 
     if (err) {
 
