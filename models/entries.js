@@ -15,6 +15,7 @@ exports.setup = function(_mongoose, _db) {
     'content': String,
     'pubDate': String,
     'source': String,
+    'image': String,
     'created_at': {
       'type': Date,
       'default': Date.now

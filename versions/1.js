@@ -82,6 +82,9 @@ module.exports.entriesCreate = function(req, res) {
       row.content = content;
       row.pubDate = pubDate;
       row.source = source;
+      if (req.body.image) {
+        row.image = req.body.image;
+      }
       row.save(function(err) {
         if (err) {
           res.json({error:{message:err}});
