@@ -9,6 +9,7 @@ exports.setup = function(_mongoose, _db) {
         'unique': true
       }
     },
+    'library_id': String,
     'title': String,
     'summary': String,
     'content': String,
