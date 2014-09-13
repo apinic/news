@@ -93,3 +93,24 @@ module.exports.entriesCreate = function(req, res) {
     }
   });
 }
+
+/**
+ * Check if entry exists
+ */
+module.exports.entriesExists = function(req, res) {
+  var hash = req.params.hash;
+  models.entries.findOne({
+    hash:hash
+  },
+  function(error, result) {
+    if (error) {
+      res.json({error:{message:error}});
+    }
+    else if (result) {
+      res.json({exists:true});
+    }
+    else {
+      res.json({exists:false});
+    }
+  });
+}

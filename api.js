@@ -14,6 +14,7 @@ app.set('json spaces', 2);
 app.get('/v1/library/all', versions['1'].librariesAll);
 app.get('/v1/entries/:id', versions['1'].entries);
 app.post('/v1/entries/:id/create', versions['1'].entriesCreate);
+app.get('/v1/entries/:hash/exists', versions['1'].entriesExists);
 
 app.get('*', function(req, res) {
   res.status(404).json({error:{message:'Recurso no encontrado.'}});
